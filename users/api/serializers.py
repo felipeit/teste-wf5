@@ -13,7 +13,7 @@ class ecdtUsuarioSerializer(serializers.ModelSerializer):
             'nmPerfil',
             'password'
             ]
-    #def get_passowrd(self, obj):        
+           
     def create(self, validated_data):
         user = ecdtUsuario(**validated_data)
         password = validated_data.pop('password', None)

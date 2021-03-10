@@ -1,6 +1,6 @@
 from django.db import models
 from users.models import ecdtUsuario
-# Create your models here.
+from datetime import datetime
 
 class egstGerenciamento(models.Model):
     idGerenciamento = models.CharField(max_length=7, primary_key=True)
@@ -21,9 +21,9 @@ class eptfProjeto(models.Model):
     idProjeto = models.CharField(max_length=7, primary_key=True)
     cdProjeto = models.CharField(max_length=20)
     nmProjeto = models.CharField(max_length=80)
-    deProjeto = models.CharField(max_length=200, null=True, blank=True)
-    deCadastro = models.DateTimeField()
-    nmUsuario = models.ForeignKey(
+    deProjeto = models.CharField(max_length=2000, null=True, blank=True)
+    dtCadastro = models.DateTimeField(auto_now=datetime.now())
+    nuUsuario = models.ForeignKey(
         ecdtUsuario, 
         null=False, 
         blank=False, 

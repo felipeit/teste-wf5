@@ -1,7 +1,6 @@
 from rest_framework import viewsets, permissions
 from projects.models import eptfProjeto, egstGerenciamento
-from projects.api.serializers import eptfProjetoSerializer, egstGerenciamentoSerializer, WorkspacesSerializer
-
+from projects.api.serializers import eptfProjetoSerializer, egstGerenciamentoSerializer
 
 class eptfProjetoViewSet(viewsets.ModelViewSet):
     """ Endpoint privado para criar/alterar/deletar/obter prjetos."""
