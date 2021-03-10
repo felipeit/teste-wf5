@@ -3,4 +3,4 @@ from users.api import views
 from users.models import ecdtUsuario
 
 router = routers.DefaultRouter()
-router.register('', views.ecdtUsuarioViewSet, basename='ecdtUsuario')
+router.register('cadastrar', views.ecdtUsuarioViewSet, basename='ecdtUsuario')

@@ -1,10 +1,6 @@
 from rest_framework import serializers
 from projects.models import eptfProjeto, egstGerenciamento
 
-class WorkspacesSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = eptfProjeto
-        fields = '__all__'
 
 class eptfProjetoSerializer(serializers.ModelSerializer):
     class Meta:

@@ -17,9 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from users.api.urls import router as api_users
 from projects.api.urls import router as api_projects
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
+
+
 api_urls = [
-    path('', include(api_users.urls)),
+    path('usuarios/', include(api_users.urls)),
     path('workspaces/', include(api_projects.urls)),
+    path('token/', obtain_jwt_token),
+    path('token-refresh/', refresh_jwt_token),
 ]
 
 urlpatterns = [
